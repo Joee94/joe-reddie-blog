@@ -1,12 +1,31 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, PageProps } from 'gatsby';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+type DataProps = {
+	site: {
+		siteMetadata: { title: string };
+	};
+	markdownRemark: {
+		frontmatter: {
+			title: string;
+			description: string;
+			date: string;
+		};
+		html: string;
+		excerpt: string;
+	};
+};
+
+type Page = { fields: { slug: string }; frontmatter: { title: string } };
+
+type PageContext = { next: Page; previous: Page };
+
+const BlogPostTemplate: React.FC<PageProps<DataProps, PageContext, string>> = ({ data, pageContext, location }) => {
 	const post = data.markdownRemark;
 	const siteTitle = data.site.siteMetadata.title;
 	const { previous, next } = pageContext;

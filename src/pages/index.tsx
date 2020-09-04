@@ -1,12 +1,37 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, PageProps } from 'gatsby';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
 
-const BlogIndex = ({ data, location }) => {
+type Post = {
+	node: {
+		frontmatter: {
+			title: string;
+			date: string;
+			description: string;
+		};
+		excerpt: string;
+		fields: {
+			slug: string;
+		};
+	};
+};
+
+type DataProps = {
+	site: {
+		siteMetadata: { title: string };
+	};
+	allMarkdownRemark: {
+		edges: Array<Post>;
+	};
+};
+
+type Location = string;
+
+const BlogIndex: React.FC<PageProps<DataProps, Location>> = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title;
 	const posts = data.allMarkdownRemark.edges;
 
@@ -14,7 +39,7 @@ const BlogIndex = ({ data, location }) => {
 		<Layout location={location} title={siteTitle}>
 			<SEO title="All posts" />
 			<Bio />
-			{posts.map(({ node }) => {
+			{posts.map(({ node }: Post) => {
 				const title = node.frontmatter.title || node.fields.slug;
 				return (
 					<article key={node.fields.slug}>
