@@ -16,6 +16,7 @@
     "gatsby-plugin-offline": "^3.2.24",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.28",
+    "gatsby-plugin-typescript": "^2.4.18",
     "gatsby-plugin-typography": "^2.5.10",
     "gatsby-remark-copy-linked-files": "^2.3.12",
     "gatsby-remark-images": "^3.3.26",
@@ -36,7 +37,8 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "2.1.0"
+    "prettier": "2.1.0",
+    "typescript": "^4.0.2"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
@@ -49,6 +51,7 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
+    "type-check": "tsc --noEmit",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
