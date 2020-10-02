@@ -4,8 +4,6 @@ date: '2020-10-02'
 description: 'A short guide to creating scaled masks in Pixi.js'
 ---
 
-# Using and scaling masks in PIXI.js
-
 Pixi.js is great for all things WebGL/Canvas, but one pain point I hit recently was with **masks**. In a project at work I was tasked with taking an image, scaling it down, cropping it to a circle, and then applying a border around it. There could be hundreds of these images on screen at any one time and they didn't have to move.
 
 ![The original brief](./brief.png)

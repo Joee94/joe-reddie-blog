@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import { rhythm } from '../utils/typography';
 
@@ -34,7 +34,10 @@ const Header = () => {
 					marginRight: `auto`,
 				}}
 			>
-				<strong>{title}</strong> {subtitle}
+				<strong>
+					<Link to="/">{title}</Link>
+				</strong>{' '}
+				{subtitle}
 			</h1>
 		</div>
 	);

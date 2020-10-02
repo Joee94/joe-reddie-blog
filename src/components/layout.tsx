@@ -5,9 +5,6 @@ import Header from './header';
 import { rhythm, scale } from '../utils/typography';
 
 const Layout: React.FC<{ location: { pathname: string }; title: string; children: React.ReactNode }> = ({ location, title, children }) => {
-	//@ts-ignore
-	const rootPath = `${__PATH_PREFIX__}/`;
-
 	return (
 		<div style={{ backgroundColor: '#f3f3f3' }}>
 			<header>
