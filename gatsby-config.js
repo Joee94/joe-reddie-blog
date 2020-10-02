@@ -1,14 +1,15 @@
 module.exports = {
 	siteMetadata: {
-		title: `Gatsby Starter Blog`,
+		title: `Joe Reddie`,
+		subtitle: 'Web Dev',
 		author: {
-			name: `Kyle Mathews`,
-			summary: `who lives and works in San Francisco building useful things.`,
+			name: `Joe Reddie`,
+			summary: `london based at Springer Nature`,
 		},
-		description: `A starter blog demonstrating what Gatsby can do.`,
+		description: `A Gatsby blog for all things me`,
 		siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
 		social: {
-			twitter: `kylemathews`,
+			twitter: `JoeReddie`,
 		},
 	},
 	plugins: [
