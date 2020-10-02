@@ -25,9 +25,15 @@ const Header = () => {
 			style={{
 				display: `flex`,
 				marginBottom: rhythm(2.5),
+				backgroundColor: 'white',
 			}}
 		>
-			<h1>
+			<h1
+				style={{
+					marginLeft: `auto`,
+					marginRight: `auto`,
+				}}
+			>
 				<strong>{title}</strong> {subtitle}
 			</h1>
 		</div>
