@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql, PageProps } from 'gatsby';
 
-import Bio from '../components/bio';
+import Header from '../components/header';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
@@ -38,7 +38,6 @@ const BlogIndex: React.FC<PageProps<DataProps, Location>> = ({ data, location })
 	return (
 		<Layout location={location} title={siteTitle}>
 			<SEO title="All posts" />
-			<Bio />
 			{posts.map(({ node }: Post) => {
 				const title = node.frontmatter.title || node.fields.slug;
 				return (

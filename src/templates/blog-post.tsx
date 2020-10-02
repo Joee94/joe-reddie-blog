@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql, PageProps } from 'gatsby';
 
-import Bio from '../components/bio';
+import Header from '../components/header';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
@@ -59,9 +59,6 @@ const BlogPostTemplate: React.FC<PageProps<DataProps, PageContext, string>> = ({
 						marginBottom: rhythm(1),
 					}}
 				/>
-				<footer>
-					<Bio />
-				</footer>
 			</article>
 
 			<nav>
